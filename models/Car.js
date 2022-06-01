@@ -37,46 +37,38 @@ const carSchema = new Schema({
         default: 0
     },
     currentRun: {
-        startDate: {
-            type: Date,
-            required: true
-        },
-        driver: {
-            licenseNumber: {
-                type: Number,
-                required: true
-            },
-            firstName: {
-                type: String,
-                required: true
-            },
-            lastName: {
-                type: String,
-                required: true
-            },
-            creditCard: {
-                number: {
-                    type: Number,
-                    required: true
+        type: {
+            startDate: Date,
+            driver: {
+                licenseNumber: {
+                    type: Number
                 },
-                owner: {
-                    type: String,
-                    required: true
+                firstName: {
+                    type: String
                 },
-                validThrough: {
-                    type: Date,
-                    required: true
+                lastName: {
+                    type: String
+                },
+                creditCard: {
+                    number: {
+                        type: Number
+                    },
+                    owner: {
+                        type: String
+                    },
+                    validThrough: {
+                        type: Date
+                    }
                 }
+            },
+            startFuelLevel: {
+                type: Number
+            },
+            startMileage: {
+                type: Number
             }
         },
-        startFuelLevel: {
-            type: Number,
-            required: true
-        },
-        startMileage: {
-            type: Number,
-            required: true
-        }
+        default: null
     },
     location: {
         type: {
